@@ -11,14 +11,14 @@ public class InsertElement {
         System.out.println("Input a number, you want insert in the array");
         int number = scanner.nextInt();
         System.out.println("Input a index insert element");
-        int n = scanner.nextInt();
-        if (n < 0 || n > arr.length) {
+        int insert = scanner.nextInt();
+        if (insert < 0 || insert > arr.length) {
             System.out.println("Do not insert element");
         } else {
-            for (int i = arr2.length - 1; i >= n; i--) {
+            for (int i = arr2.length - 1; i >= insert; i--) {
                 arr2[i] = arr2[i - 1];
             }
-            arr2[n] = number;
+            arr2[insert] = number;
             System.out.println(Arrays.toString(arr2));
         }
     }

@@ -7,8 +7,8 @@ public class DeleteElement {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Input a length of array: ");
-        int n = scanner.nextInt();
-        int[] array = new int[n];
+        int size = scanner.nextInt();
+        int[] array = new int[size];
         for (int i = 0; i < array.length; i++) {
             System.out.println("Input value of once element " + (i + 1));
             array[i] = scanner.nextInt();
