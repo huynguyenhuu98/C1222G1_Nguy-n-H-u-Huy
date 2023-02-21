@@ -3,26 +3,32 @@ package ss4_class_object.baitap.StopWatch;
 import java.util.Date;
 
 public class BuildStopWatch {
-    int startTime;
-    int endTime;
+    private long startTime;
+    private long endTime;
+    public Date startDate;
+    public Date endDate;
 
-    int getStartTime() {
-        return startTime;
+    public BuildStopWatch() {
+        startTime = new Date().getTime();
     }
 
-    int getEndTime() {
-        return endTime;
+    public Date getStartDate() {
+        return startDate = new Date();
     }
 
-    static Date setStartTime() {
-        return new Date();
+    public Date getEndDate() {
+        return endDate = new Date();
     }
 
-    static Date setEndTime() {
-        return new Date();
-    }
-    Long getElapsedTime(){
-        return setEndTime()  setStartTime();
+    public long getStartTime() {
+        return startTime = new Date().toInstant().toEpochMilli();
     }
 
+    public long getEndTime() {
+       return endTime = new Date().toInstant().toEpochMilli();
+    }
+
+    public long getElapsedTime() {
+        return endTime - startTime;
+    }
 }
