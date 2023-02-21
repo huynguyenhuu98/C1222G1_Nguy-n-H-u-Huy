@@ -4,17 +4,10 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class SumColumn {
-    public static int total(int[][] arr) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Input a column want find total it:");
-        int a = scanner.nextInt();
+    public static int total(int[][] arr, int number) {
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                if (a == j) {
-                    sum += arr[i][j];
-                }
-            }
+                sum += arr[i][number];
         }
         return sum;
     }
@@ -28,7 +21,7 @@ public class SumColumn {
         int[][] arr = new int[length1][length2];
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                System.out.println("Input a value of once element "+(i+1));
+                System.out.println("Input a value of once element " + (i + 1));
                 arr[i][j] = scanner.nextInt();
             }
         }
@@ -42,6 +35,6 @@ public class SumColumn {
             }
         } while (column < 0);
         System.out.println(Arrays.deepToString(arr));
-        System.out.println("Sum of elemnet same columns: " + total(arr));
+        System.out.println("Sum of elemnet same columns: " + total(arr, column));
     }
 }
