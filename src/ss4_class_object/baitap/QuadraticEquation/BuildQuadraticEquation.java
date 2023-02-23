@@ -1,7 +1,9 @@
 package ss4_class_object.baitap.QuadraticEquation;
 
 public class BuildQuadraticEquation {
-    double a, b, c;
+    double a;
+    double b;
+    double c;
 
     public BuildQuadraticEquation(double a, double b, double c) {
         this.a = a;
