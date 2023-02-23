@@ -1,20 +1,18 @@
 package ss5_access_modifier_static.baitap.Build_class_Java;
 
 public class BuildClassJava {
-    private String name;
-    private String classes;
+    private String name = "John";
+    private String classes  = "C02";
 
     public BuildClassJava() {
-        this.name = "John";
-        this.classes = "C02";
     }
 
-    public void setName() {
-        this.name = name;
+    public String setName(String first) {
+        return name = first;
     }
 
-    public void setClasses() {
-        this.classes = classes;
+    public String setClasses(String second) {
+        return classes = second;
     }
 
     public void display() {
