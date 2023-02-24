@@ -7,6 +7,8 @@ public class Display {
         System.out.println(point);
 
         MovablePoint pointMova = new MovablePoint(1,2,33, 44);
-        System.out.println(pointMova.toString());
+        System.out.println(pointMova);
+
+        System.out.println("Move + "+pointMova.move());
     }
 }
