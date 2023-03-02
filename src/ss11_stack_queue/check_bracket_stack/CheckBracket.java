@@ -4,27 +4,23 @@ import java.util.Stack;
 
 public class CheckBracket {
     public static boolean isBalanced(String expression) {
-        Stack<Character> stack = new Stack<>();
+        Stack<Character> bStack = new Stack<>();
 
         for (int i = 0; i < expression.length(); i++) {
-            char c = expression.charAt(i);
-
-            if (c == '(' || c == '[' || c == '{') {
-                stack.push(c);
-            } else if (c == ')' || c == ']' || c == '}') {
-                if (stack.isEmpty()) {
+            char sympol = expression.charAt(i);
+            if (sympol == '(' || sympol == '[' || sympol == '{') {
+                bStack.push(sympol);
+            } else if (sympol == ')' || sympol == ']' || sympol == '}') {
+                if (bStack.isEmpty()) {
                     return false;
                 }
-
-                char left = stack.pop();
-
-                if ((c == ')' && left != '(') || (c == ']' && left != '[') || (c == '}' && left != '{')) {
+                char left = bStack.pop();
+                if ((sympol == ')' && left != '(') || (sympol == ']' && left != '[') || (sympol == '}' && left != '{')) {
                     return false;
                 }
             }
         }
-
-        return stack.isEmpty();
+        return bStack.isEmpty();
     }
 
     public static void main(String[] args) {
@@ -32,9 +28,9 @@ public class CheckBracket {
         boolean balanced = isBalanced(expression);
 
         if (balanced) {
-            System.out.println("The expression is balanced.");
+            System.out.println("The expression is Balanced.");
         } else {
-            System.out.println("The expression is not balanced.");
+            System.out.println("The expression is not Balanced.");
         }
     }
 }

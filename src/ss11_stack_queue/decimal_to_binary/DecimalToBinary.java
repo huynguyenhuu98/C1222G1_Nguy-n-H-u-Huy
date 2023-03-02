@@ -10,8 +10,8 @@ public class DecimalToBinary {
 
         String binary = "";
         while (decimal > 0) {
-            int remainder = decimal % 2;
-            binary = remainder + binary;
+            int surplus = decimal % 2;
+            binary = surplus + binary;
             decimal = decimal / 2;
         }
 
