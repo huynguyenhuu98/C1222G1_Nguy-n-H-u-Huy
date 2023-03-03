@@ -1,4 +1,4 @@
-package ss5_access_modifier_static.thuchanh;
+package ss5_access_modifier_static.thuchanh.Method;
 
 public class StaticMethod {
     private String name;

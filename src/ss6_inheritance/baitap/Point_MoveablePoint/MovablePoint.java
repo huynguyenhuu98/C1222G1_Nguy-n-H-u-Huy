@@ -5,14 +5,13 @@ import java.util.Arrays;
 public class MovablePoint extends Point {
     private float xSpeed;
     private float ySpeed;
-
     public MovablePoint(float x, float y, float xSpeed, float ySpeed) {
         super(x, y);
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
     }
 
-    public MovablePoint(float xSpeed, float ySpeed) {
+    public MovablePoint (float xSpeed, float ySpeed) {
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
     }

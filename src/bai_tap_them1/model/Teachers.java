@@ -1,2 +1,4 @@
-package bai_tap_them1.model;public class Teachers {
+package bai_tap_them1.model;
+
+public class Teachers {
 }
