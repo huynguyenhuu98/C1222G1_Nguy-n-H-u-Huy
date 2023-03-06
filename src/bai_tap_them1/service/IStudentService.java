@@ -1,10 +1,14 @@
 package bai_tap_them1.service;
 
+import bai_tap_them1.model.Students;
+
+import java.util.List;
+
 public interface IStudentService {
-    void displayAll();
 
+    List<Students> display();
 
-    void createStudent();
+    boolean delete();
 
-    void deleteStudent();
+    void create();
 }

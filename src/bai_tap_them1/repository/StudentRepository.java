@@ -13,22 +13,21 @@ public class StudentRepository implements IStudentRepository {
         studentList.add(new Students(103,"Huệ","01/11/1996",null,"C12",6.8));
     }
     @Override
-    public List<Students> displayAll() {
+    public List<Students> display() {
         return studentList;
     }
 
-    public boolean deleteById() {
+    public boolean delete() {
         for (int i = 0; i < studentList.size(); i++) {
             if (studentList.get(i).getId()) {
                 studentList.remove(i);
-                return true;
             }
         }
         return false;
     }
 
     @Override
-    public void createStudent() {
+    public void create() {
         studentList.add(1,new Students());
     }
 }

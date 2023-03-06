@@ -1,22 +1,23 @@
 package bai_tap_them1.service;
 
 import bai_tap_them1.model.Students;
-import bai_tap_them1.repository.IStudentRepository;
-import bai_tap_them1.repository.StudentRepository;
+import bai_tap_them1.repository.ITeacherRepository;
+import bai_tap_them1.repository.TeacherRepository;
+import bai_tap_them1.model.Teacher;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class StudentService implements IStudentService {
+public class TeacherService implements ITeacherService {
     Scanner scanner = new Scanner(System.in);
-    IStudentRepository iStudentRepository = new StudentRepository();
+    ITeacherRepository iTeacherRepository = new TeacherRepository();
     @Override
-    public List<Students> display() {
-        List<Students> list = iStudentRepository.display();
+    public List<Teacher> display() {
+        List<Teacher> list = iTeacherRepository.display();
         if (list.size() == 0) {
             System.out.println("No one learn !");
         } else {
-            for (Students temp : list) {
+            for (Teacher temp : list) {
                 System.out.println(temp);
             }
         }
@@ -27,7 +28,7 @@ public class StudentService implements IStudentService {
     public boolean delete() {
         System.out.println("Enter id delete: ");
         int id = Integer.parseInt(scanner.nextLine());
-        if (iStudentRepository.delete()) {
+        if (iTeacherRepository.delete()) {
             System.out.println("Delete success");
         } else {
             System.out.println("Do not find object to delete");
@@ -58,7 +59,7 @@ public class StudentService implements IStudentService {
         System.out.println("Enter point: ");
         double point = scanner.nextDouble();
         Students student = new Students(id, name, dateOfBirth, gender, nameClass, point);
-        iStudentRepository.create();
+        iTeacherRepository.create();
         System.out.println("Add success");
     }
 }

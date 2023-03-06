@@ -5,10 +5,10 @@ import bai_tap_them1.model.Students;
 import java.util.List;
 
 public interface IStudentRepository {
-    List<Students> displayAll();
 
-    boolean deleteById();
+    boolean delete();
 
-    void createStudent();
+    void create();
 
+    List<Students> display();
 }
