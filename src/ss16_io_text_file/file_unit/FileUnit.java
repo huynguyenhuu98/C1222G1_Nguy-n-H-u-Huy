@@ -1,4 +1,4 @@
-package ss16_io_text_file;
+package ss16_io_text_file.file_unit;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.List;
 public class FileUnit {
     public static void writeFile(String string1, String string2) {
         try {
-            FileWriter fileWrite = new FileWriter("ss16_io_text_file/result_io", true);
+            FileWriter fileWrite = new FileWriter("ss16_io_text_file/file_unit/result_io", true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWrite);
             bufferedWriter.write(string1);
             bufferedWriter.newLine();
@@ -28,6 +28,7 @@ public class FileUnit {
             String line = null;
             while ((line = bufferedReader.readLine()) != null) {
                 list.add(line);
+                System.out.println(readFile(line));
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

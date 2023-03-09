@@ -1,4 +1,4 @@
-package ss16_io_text_file;
+package ss16_io_text_file.file_unit;
 
 public class Result {
     public static void main(String[] args) {
