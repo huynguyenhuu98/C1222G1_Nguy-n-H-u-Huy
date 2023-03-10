@@ -23,7 +23,7 @@ public class FileUnit {
     public static List<String> readFile(String pathFile) {
         List<String> list = new ArrayList<>();
         try {
-            FileReader fileReader = new FileReader(pathFile);
+            FileReader fileReader = new FileReader("ss16_io_text_file/file_unit/result_io");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line = null;
             while ((line = bufferedReader.readLine()) != null) {
@@ -36,5 +36,11 @@ public class FileUnit {
             throw new RuntimeException(e);
         }
         return list;
+    }
+    public static void main(String[] args) {
+        String string = "Hello CodeGym";
+        String string1 = "Hi Google";
+        FileUnit.writeFile(string,string1);
+
     }
 }
