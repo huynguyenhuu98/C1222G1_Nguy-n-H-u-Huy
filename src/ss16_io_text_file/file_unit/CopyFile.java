@@ -1,46 +1,34 @@
 package ss16_io_text_file.file_unit;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 
-public class FileUnit {
-    public static void writeFile(String string1, String string2) {
+public class CopyFile {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = null;
+        BufferedWriter bufferedWriter = null;
+
         try {
-            FileWriter fileWrite = new FileWriter("ss16_io_text_file/file_unit/result_io", true);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWrite);
-            bufferedWriter.write(string1);
-            bufferedWriter.newLine();
-            bufferedWriter.write(string2);
+            FileReader fileReader = new FileReader("ss16_io_text_file/file_unit/source.txt");
+            FileWriter fileWriter = new FileWriter("ss16_io_text_file/file_unit/target.txt", true);
 
-            bufferedWriter.close();
-            fileWrite.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static List<String> readFile(String pathFile) {
-        List<String> list = new ArrayList<>();
-        try {
-            FileReader fileReader = new FileReader("ss16_io_text_file/file_unit/result_io");
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            String line = null;
+            bufferedReader = new BufferedReader(fileReader);
+            bufferedWriter = new BufferedWriter(fileWriter);
+            String line;
             while ((line = bufferedReader.readLine()) != null) {
-                list.add(line);
-                System.out.println(readFile(line));
+                bufferedWriter.write(line);
+                bufferedWriter.newLine();
             }
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("file does not exist");
+        } catch (NullPointerException e) {
+            System.out.println("file empty");
+        } finally {
+            assert bufferedReader != null;
+            bufferedReader.close();
+            assert bufferedWriter != null;
+            bufferedWriter.close();
         }
-        return list;
-    }
-    public static void main(String[] args) {
-        String string = "Hello CodeGym";
-        String string1 = "Hi Google";
-        FileUnit.writeFile(string,string1);
-
+        System.out.println("Display string");
     }
 }
+
