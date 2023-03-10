@@ -18,5 +18,5 @@ public class ValidateNumberPhone {
         return matcher.matches();
     }
 
-    public static final String REGEX_NUMBER_PHONE = "^\\d{2}-0\\d{9}$";
+    public static final String REGEX_NUMBER_PHONE = "^[(]\\d{2}[)]-[(]0\\d{9}[)]$";
 }
