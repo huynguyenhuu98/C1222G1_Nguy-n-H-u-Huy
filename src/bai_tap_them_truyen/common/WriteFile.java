@@ -1,2 +1,6 @@
-package bai_tap_them_truyen.common;public class WriteFile {
+package bai_tap_them_truyen.common;
+
+public class WriteFile {
+
 }
+

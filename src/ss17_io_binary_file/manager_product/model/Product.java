@@ -32,11 +32,11 @@ public class Product implements Serializable {
         return price;
     }
 
-    public String getGoods() {
+    public String getProducer() {
         return producer;
     }
 
-    public String getDecrible() {
+    public String getUses() {
         return uses;
     }
 

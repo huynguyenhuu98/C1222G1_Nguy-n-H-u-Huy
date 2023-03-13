@@ -1,15 +1,15 @@
 package bai_tap_them_truyen.model;
 
-public class Truyen {
+public class Story {
     private int id;
     private String name;
     private String date;
     private String producer;
 
-    public Truyen() {
+    public Story() {
     }
 
-    public Truyen(int id, String name, String date, String producer) {
+    public Story(int id, String name, String date, String producer) {
         this.id = id;
         this.name = name;
         this.date = date;

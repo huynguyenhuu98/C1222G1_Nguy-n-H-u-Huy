@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadFile {
-    public static List<Product> read(String path) {
+    public static List<Product> readFile(String path) {
         List<Product> list = new ArrayList<>();
         BufferedReader bufferedReader = null;
         try {
