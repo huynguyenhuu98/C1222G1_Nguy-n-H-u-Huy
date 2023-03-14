@@ -1,4 +1,6 @@
 package case_study_module2.repository;
 
-public class PromotionRepository {
+import case_study_module2.repository.inter.IPromotionRepository;
+
+public class PromotionRepository implements IPromotionRepository {
 }

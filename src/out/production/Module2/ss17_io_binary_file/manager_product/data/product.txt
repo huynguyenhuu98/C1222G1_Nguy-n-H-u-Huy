@@ -1,2 +1,0 @@
-1001, Ice cream, 15000, Tràng Tien, ngon
-1002, Candy, 10000, Kinh do, ngot

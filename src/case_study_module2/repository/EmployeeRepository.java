@@ -1,4 +1,6 @@
 package case_study_module2.repository;
 
-public class EmployeeRepository {
+import case_study_module2.repository.inter.IEmployeeRepository;
+
+public class EmployeeRepository implements IEmployeeRepository {
 }

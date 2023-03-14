@@ -12,8 +12,8 @@ public class ProductService implements IProductService {
     IProductRepository iProductRepository = new ProductRepository();
     Scanner scanner = new Scanner(System.in);
 
-    public void add() {
-        List<Product> list = new ArrayList<>();
+    public void addProduct() {
+        List <Product> list = new ArrayList<>();
         System.out.println("Enter id of product: ");
         String id = scanner.nextLine();
         System.out.println("Enter name of product: ");
@@ -25,8 +25,8 @@ public class ProductService implements IProductService {
         System.out.println("Enter uses: ");
         String uses = scanner.nextLine();
         Product newProduct = new Product(id, name, price, goods, uses);
-        iProductRepository.add(newProduct);
-        System.out.println(list);
+        list.add(newProduct);
+        iProductRepository.addProduct(list);
     }
 
     @Override

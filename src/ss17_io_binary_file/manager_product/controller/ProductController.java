@@ -19,7 +19,7 @@ public class ProductController {
             choice = Integer.parseInt(input.nextLine());
             switch (choice) {
                 case 1:
-                    iProductService.add();
+                    iProductService.addProduct();
                     break;
                 case 2:
                     iProductService.display();
