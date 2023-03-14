@@ -6,7 +6,6 @@ public class Customer extends Person {
 
     public Customer() {
     }
-
     public Customer(String id, String name, String date, String gender,
                     String idCard, String numberPhone, String email, String typeCustomer, String address) {
         super(id, name, date, gender, idCard, numberPhone, email);
@@ -32,9 +31,9 @@ public class Customer extends Person {
 
     @Override
     public String toString() {
-        return "Customer{" +
+        return "Customer{" + super.toString() +
                 "typeCustomer='" + typeCustomer + '\'' +
                 ", address='" + address + '\'' +
-                '}';
+                 '}'+"\n";
     }
 }
