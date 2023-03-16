@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VillaRepository implements IVillaRepository {
-    String file = "case_study_module2/data/facility.csv";
+    String file = "case_study_module2/data/villa.csv";
     private static String toCSV(Villa villa){
         return villa.getNameService() +","+villa.getAreaUse()+","+villa.getCostRent()+","
                 +villa.getAmountPeople()+","+villa.getTypeRent()+","+villa.getStandard()+","+villa.getAreaPool()+","+villa.getAmountFloor();

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HouseRepository implements IHouseRepository {
-    String file = "case_study_module2/data/facility.csv";
+    String file = "case_study_module2/data/house.csv";
     private static String toCSV(House house){
         return house.getNameService() +","+house.getAreaUse()+","+house.getCostRent()+","
                 +house.getAmountPeople()+","+house.getTypeRent()+","+house.getStandardRoom()+","+house.getAmountFloor();

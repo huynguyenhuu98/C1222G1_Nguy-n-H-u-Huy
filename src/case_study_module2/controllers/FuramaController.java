@@ -81,7 +81,9 @@ public class FuramaController {
                         choice4 = Integer.parseInt(scanner.nextLine());
                         switch (choice4) {
                             case 1:
-                                iFacilityService.display();
+                                iVillaService.display();
+                                iHouseService.display();
+                                iRoomService.display();
                                 break;
                             case 2:
                                 int choice5;
@@ -103,7 +105,7 @@ public class FuramaController {
                                             iRoomService.add();
                                             break;
                                         case 4:
-                                            break loop4;
+                                            break loop3;
                                     }
                                 } while (choice5>=1 && choice5<=4);
                                 break;
