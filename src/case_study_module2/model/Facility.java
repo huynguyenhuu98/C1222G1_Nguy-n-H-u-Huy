@@ -1,16 +1,16 @@
 package case_study_module2.model;
 
-public abstract class Facility {
+public class Facility {
     private String nameService;
     private String areaUse;
-    private double costRent;
-    private int amountPeople;
+    private String costRent;
+    private String amountPeople;
     private String typeRent;
 
     public Facility() {
     }
 
-    public Facility(String nameService, String areaUse, double costRent, int amountPeople, String typeRent) {
+    public Facility(String nameService, String areaUse, String costRent, String amountPeople, String typeRent) {
         this.nameService = nameService;
         this.areaUse = areaUse;
         this.costRent = costRent;
@@ -34,19 +34,19 @@ public abstract class Facility {
         this.areaUse = areaUse;
     }
 
-    public double getCostRent() {
+    public String getCostRent() {
         return costRent;
     }
 
-    public void setCostRent(double costRent) {
+    public void setCostRent(String costRent) {
         this.costRent = costRent;
     }
 
-    public int getAmountPeople() {
+    public String getAmountPeople() {
         return amountPeople;
     }
 
-    public void setAmountPeople(int amountPeople) {
+    public void setAmountPeople(String amountPeople) {
         this.amountPeople = amountPeople;
     }
 
@@ -60,8 +60,7 @@ public abstract class Facility {
 
     @Override
     public String toString() {
-        return "Facility{" +
-                "nameService='" + nameService + '\'' +
+        return  "nameService='" + nameService + '\'' +
                 ", areaUse='" + areaUse + '\'' +
                 ", costRent=" + costRent +
                 ", amountPeople=" + amountPeople +

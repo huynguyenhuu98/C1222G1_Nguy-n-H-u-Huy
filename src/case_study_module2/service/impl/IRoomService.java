@@ -1,7 +1,6 @@
 package case_study_module2.service.impl;
 
-public interface IEmployeeService {
+public interface IRoomService {
     void display();
     void add();
-//    void edit();
 }

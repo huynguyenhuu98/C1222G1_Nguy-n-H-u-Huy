@@ -1,9 +1,7 @@
 package case_study_module2.controllers;
 
-import case_study_module2.service.CustomerService;
-import case_study_module2.service.EmployeeService;
-import case_study_module2.service.impl.ICustomerService;
-import case_study_module2.service.impl.IEmployeeService;
+import case_study_module2.service.*;
+import case_study_module2.service.impl.*;
 
 import java.util.Scanner;
 
@@ -13,6 +11,10 @@ public class FuramaController {
     public void displayMainMenu() {
         ICustomerService iCustomerService = new CustomerService();
         IEmployeeService iEmployeeService = new EmployeeService();
+        IFacilityService iFacilityService = new FacilityService();
+        IVillaService iVillaService = new VillaService();
+        IHouseService iHouseService = new HouseService();
+        IRoomService iRoomService = new RoomService();
         int choice1;
         do {
             System.out.println("1.\tEmployee Management\n" +
@@ -39,8 +41,8 @@ public class FuramaController {
                             iEmployeeService.add();
                             break;
                         case 3:
-                            iEmployeeService.edit();
-                            break;
+//                            iEmployeeService.edit();
+//                            break;
                         case 4:
                             break loop1;
                     }
@@ -61,6 +63,7 @@ public class FuramaController {
                                 break;
                             case 2:
                                 iCustomerService.add();
+                                break;
                             case 3:
                             case 4:
                                 break loop2;
@@ -68,10 +71,48 @@ public class FuramaController {
                     } while (choice3 >= 1 && choice3 <= 4);
                     break;
                 case 3:
-                    System.out.println("1\tDisplay list facility\n" +
-                            "2\tAdd new facility\n" +
-                            "3\tDisplay list facility maintenance\n" +
-                            "4\tReturn main menu\n");
+                    int choice4;
+                    loop3:
+                    do {
+                        System.out.println("1\tDisplay list facility\n" +
+                                "2\tAdd new facility\n" +
+                                "3\tDisplay list facility maintenance\n" +
+                                "4\tReturn main menu\n");
+                        choice4 = Integer.parseInt(scanner.nextLine());
+                        switch (choice4) {
+                            case 1:
+                                iFacilityService.display();
+                                break;
+                            case 2:
+                                int choice5;
+                                loop4:
+                                do {
+                                    System.out.println("1\tAdd New Villa\n" +
+                                            "2\tAdd New House\n" +
+                                            "3\tAdd New Room\n" +
+                                            "4\tBack to menu\n");
+                                    choice5 = Integer.parseInt(scanner.nextLine());
+                                    switch (choice5) {
+                                        case 1:
+                                            iVillaService.add();
+                                            break;
+                                        case 2:
+                                            iHouseService.add();
+                                            break;
+                                        case 3:
+                                            iRoomService.add();
+                                            break;
+                                        case 4:
+                                            break loop4;
+                                    }
+                                } while (choice5>=1 && choice5<=4);
+                                break;
+                            case 3:
+                                break;
+                            case 4:
+                                break loop3;
+                        }
+                    } while(choice4>=1 && choice4<=4);
                     break;
                 case 4:
                     System.out.println("1.\tDisplay list customers use service\n" +

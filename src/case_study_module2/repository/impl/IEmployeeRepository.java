@@ -8,5 +8,5 @@ public interface IEmployeeRepository {
     List<Employee> display();
     void add(Employee employee);
 
-    void edit(Employee employee);
+//    void edit(String idEdit);
 }
