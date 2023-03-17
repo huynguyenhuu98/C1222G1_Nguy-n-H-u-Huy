@@ -1,5 +1,6 @@
 package case_study_module2.service;
 
+import case_study_module2.common.Regex;
 import case_study_module2.model.Room;
 import case_study_module2.repository.RoomRepository;
 import case_study_module2.repository.impl.IRoomRepository;
@@ -16,18 +17,36 @@ public class RoomService implements IRoomService {
         System.out.println(result);
     }
     public void add() {
-        System.out.println("Enter new name service:");
-        String nameService = scanner.nextLine();
-        System.out.println("Enter new area uses:");
-        String areaUses = scanner.nextLine();
-        System.out.println("Enter new cost rent:");
-        String costRent = scanner.nextLine();
-        System.out.println("Enter new amount people:");
-        String amountPeople = scanner.nextLine();
-        System.out.println("Enter new type rent:");
-        String typeRent = scanner.nextLine();
-        System.out.println("Enter new free service:");
-        String freeService = scanner.nextLine();
+        String nameService;
+        do {
+            System.out.println("Enter new name service:");
+            nameService = scanner.nextLine();
+        } while (!Regex.checkName(nameService));
+        String areaUses;
+        do {
+            System.out.println("Enter new area uses:");
+            areaUses = scanner.nextLine();
+        } while (Double.parseDouble(areaUses) <= 30);
+        String costRent;
+        do {
+            System.out.println("Enter new cost rent:");
+            costRent = scanner.nextLine();
+        } while (Double.parseDouble(costRent) > 0);
+        String amountPeople;
+        do {
+            System.out.println("Enter new amount people:");
+            amountPeople = scanner.nextLine();
+        } while (Double.parseDouble(amountPeople) <= 0 || Double.parseDouble(amountPeople) >= 20);
+        String typeRent;
+        do {
+            System.out.println("Enter new type rent:");
+            typeRent = scanner.nextLine();
+        } while (!Regex.checkName(typeRent));
+        String freeService;
+        do {
+            System.out.println("Enter new free service:");
+            freeService = scanner.nextLine();
+        } while (!Regex.checkName(freeService));
         Room house = new Room(nameService,areaUses,costRent,amountPeople,typeRent,freeService);
         iRoomRepository.add(house);
     }
