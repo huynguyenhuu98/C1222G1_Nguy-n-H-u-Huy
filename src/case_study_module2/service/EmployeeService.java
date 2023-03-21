@@ -27,8 +27,9 @@ public class EmployeeService implements IEmployeeService {
             System.out.println("Enter new name:");
             name = scanner.nextLine();
         } while (!Regex.checkNamePeople(name));
+        String date;
         System.out.println("Enter new date:");
-        String date = scanner.nextLine();
+        date = scanner.nextLine();
         String gender;
         do {
             System.out.println("Enter new gender (Males/Females): ");

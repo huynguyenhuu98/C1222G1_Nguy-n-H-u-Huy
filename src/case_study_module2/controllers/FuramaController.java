@@ -2,7 +2,6 @@ package case_study_module2.controllers;
 
 import case_study_module2.service.*;
 import case_study_module2.service.impl.*;
-
 import java.util.Scanner;
 
 public class FuramaController {
@@ -11,7 +10,6 @@ public class FuramaController {
     public void displayMainMenu() {
         ICustomerService iCustomerService = new CustomerService();
         IEmployeeService iEmployeeService = new EmployeeService();
-        IFacilityService iFacilityService = new FacilityService();
         IVillaService iVillaService = new VillaService();
         IHouseService iHouseService = new HouseService();
         IRoomService iRoomService = new RoomService();

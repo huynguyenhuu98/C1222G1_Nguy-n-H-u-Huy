@@ -23,16 +23,18 @@ public class CustomerRepository implements ICustomerRepository {
         List<Customer> customers = new ArrayList<>();
         for (String str : stringList) {
             String[] temp = str.split(",");
-            Customer customer = new Customer(temp[0], temp[1], temp[2], temp[3], temp[4], temp[5], temp[6], temp[7], temp[8]);
+            Customer customer = new Customer(temp[0],temp[1],temp[2],temp[3],temp[4],temp[5],temp[6],temp[7],temp[8]);
             customers.add(customer);
         }
         return customers;
     }
 
+    @Override
     public void add(Customer customer) {
         String str = toCSV(customer);
         List<String> stringList = new ArrayList<>();
         stringList.add(str);
-        WriteFile.writeFile(file, stringList);
+        WriteFile.writeFile(file,stringList);
     }
+
 }

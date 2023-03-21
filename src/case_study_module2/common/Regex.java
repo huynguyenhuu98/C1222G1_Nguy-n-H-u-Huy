@@ -42,16 +42,13 @@ public class Regex {
         Matcher matcher = pattern.matcher(string);
         return matcher.matches();
     }
-    public static boolean checkEmail(String email){
+    public static boolean checkEmail(String string){
         Pattern pattern = Pattern.compile("^\\w+@\\w+.com$");
-        Matcher matcher = pattern.matcher(email);
+        Matcher matcher = pattern.matcher(string);
         return matcher.matches();
     }
     public static String localDate(LocalDate date){
-
-
         DateTimeFormatter simpleDateFormat = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-
         return simpleDateFormat.format(date);
     }
 
